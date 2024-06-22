@@ -1,8 +1,6 @@
 name: mainci
 run-name: ${{ github.actor }}
 on: push
-env:
-  SECRET_KEY: ${{ secrets.SECRET_VALUE }}
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -11,7 +9,4 @@ jobs:
       - name: reveal
         run: |
           echo '${{github.actor}} ueduck8x'
-          echo '${{ secrets.SECRET_VALUE }}'
           echo '${{ vars.TEST_VALUE }}'
-          echo '${{ toJSon(secrets.SECRET_VALUE) }}'
-          echo '${{ toJson(vars.TEST_VALUE) }}'
