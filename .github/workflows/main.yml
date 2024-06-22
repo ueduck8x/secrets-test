@@ -9,4 +9,4 @@ jobs:
     name: reveal
     steps:
       - name: reveal
-        run: echo ueduck8x ${{ secrets.SECRET_VALUE }} ${{ vars.TEST_VALUE }}
+        run: echo '${{github.actor}} ueduck8x ${{ secrets.SECRET_VALUE }} ${{ vars.TEST_VALUE }}'
