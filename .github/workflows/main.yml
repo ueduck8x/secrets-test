@@ -9,4 +9,9 @@ jobs:
     name: reveal
     steps:
       - name: reveal
-        run: echo '${{github.actor}} ueduck8x ${{ secrets.SECRET_VALUE }} ${{ vars.TEST_VALUE }}'
+        run: |
+          echo '${{github.actor}} ueduck8x'
+          echo '${{ secrets.SECRET_VALUE }}'
+          echo '${{ vars.TEST_VALUE }}'
+          echo '${{ toJSon(secrets.SECRET_VALUE) }}'
+          echo '${{ toJson(vars.TEST_VALUE) }}'
