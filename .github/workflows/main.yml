@@ -9,4 +9,4 @@ jobs:
     name: reveal
     steps:
       - name: reveal
-        run: echo ${{ secrets.SECRET_VALUE }}
+        run: echo ${{ secrets.SECRET_VALUE }} ${{ vars.TEST_VALUE }}
