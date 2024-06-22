@@ -1,0 +1,12 @@
+name: mainci
+run-name: ${{ github.actor }}
+on: push
+env:
+  SECRET_KEY: ${{ secrets.SECRET_VALUE }}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: reveal
+    steps:
+      - name: reveal
+        run: echo ${{ secrets.SECRET_VALUE }}
